@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Articoli</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Gestione Articoli</h1>
+    <button id="openArticlePopupBtn">Inserisci Nuovo Articolo</button>
+
+    <table id="articleTable">
+        <thead>
+            <tr>
+                <th>Titolo</th>
+                <th>Testo</th>
+                <th>Stato</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody id="articleList"></tbody>
+    </table>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="articlePopup" class="popup">
+        <div class="popup-header">Inserisci Articolo</div>
+        <div class="popup-body">
+            <label for="articleTitle">Titolo:</label>
+            <input type="text" id="articleTitle" name="articleTitle" required>
+            <br><br>
+            <label for="articleText">Testo:</label>
+            <textarea id="articleText" name="articleText" rows="4" required></textarea>
+        </div>
+        <div class="popup-footer">
+            <button id="cancelArticleBtn">Annulla</button>
+            <button id="saveArticleBtn">Salva</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

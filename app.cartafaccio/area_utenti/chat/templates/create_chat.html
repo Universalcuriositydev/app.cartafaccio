@@ -1,0 +1,7 @@
+<?php $title = "Create Chat"; include('header.php'); ?>
+<form action="../src/create_chat.php" method="POST">
+    <input type="text" name="topic" placeholder="Topic" required><br>
+    <input type="hidden" name="token" value="<?php echo generateToken(); ?>">
+    <button type="submit">Create Chat</button>
+</form>
+<?php include('footer.php'); ?>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Lezioni</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Gestione Lezioni</h1>
+    <button id="openLessonPopupBtn">Inserisci Nuova Lezione</button>
+
+    <table id="lessonTable">
+        <thead>
+            <tr>
+                <th>Titolo</th>
+                <th>Capitolo</th>
+                <th>Sezione</th>
+                <th>Video</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody id="lessonList"></tbody>
+    </table>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="lessonPopup" class="popup">
+        <div class="popup-header">Inserisci Lezione</div>
+        <div class="popup-body">
+            <label for="lessonTitle">Titolo:</label>
+            <input type="text" id="lessonTitle" name="lessonTitle" required>
+            <br><br>
+            <label for="lessonChapter">Capitolo:</label>
+            <input type="text" id="lessonChapter" name="lessonChapter" required>
+            <br><br>
+            <label for="lessonSection">Sezione:</label>
+            <input type="text" id="lessonSection" name="lessonSection" required>
+            <br><br>
+            <label for="lessonVideo">Video:</label>
+            <input type="file" id="lessonVideo" name="lessonVideo" accept="video/*" required>
+        </div>
+        <div class="popup-footer">
+            <button id="cancelLessonBtn">Annulla</button>
+            <button id="saveLessonBtn">Salva</button>
+        </div>
+    </div>
+
+    <script>
+        const courseId = new URLSearchParams(window.location.search).get('courseId');
+    </script>
+    <script src="js/lessons.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Corsi</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Gestione Corsi</h1>
+    <button id="openCoursePopupBtn">Inserisci Nuovo Corso</button>
+
+    <table id="courseTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrizione</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody id="courseList"></tbody>
+    </table>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="coursePopup" class="popup">
+        <div class="popup-header">Inserisci Corso</div>
+        <div class="popup-body">
+            <label for="courseName">Nome:</label>
+            <input type="text" id="courseName" name="courseName" required>
+            <br><br>
+            <label for="courseDescription">Descrizione:</label>
+            <input type="text" id="courseDescription" name="courseDescription" required>
+        </div>
+        <div class="popup-footer">
+            <button id="cancelCourseBtn">Annulla</button>
+            <button id="saveCourseBtn">Salva</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="deleteConfirmPopup" class="popup">
+        <div class="popup-header">Conferma Eliminazione</div>
+        <div class="popup-body">
+            <p>Sei sicuro di voler eliminare questo corso?</p>
+        </div>
+        <div class="popup-footer">
+            <button id="confirmDeleteBtn" style="background-color: green; color: white;">Sì</button>
+            <button id="cancelDeleteBtn" style="background-color: red; color: white;">Annulla</button>
+        </div>
+    </div>
+
+    <!-- Overlay per oscurare lo sfondo quando il popup è attivo -->
+    <div id="deleteOverlay" class="overlay"></div>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
